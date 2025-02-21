@@ -12,13 +12,14 @@ public class TestGaulois {
 		asterixGaulois.parler("Bonjour Obélix");
 		obelixGaulois.parler("Bonjour Astérix. Ca te dirais d'aller chasser des sangleirs ?");
 		asterixGaulois.parler("Oui très bonne idée");
-		
+
 		Romain soldatRomain = new Romain("Soldat Romain", 10);
 		Romain guerrierRomain = new Romain("Guerrier Romain", 2);
 		Romain minusRomain = new Romain("Minus", 6);
-		
-		System.out.println("Dans la forêt " + asterixGaulois.getNom() + " et " + obelixGaulois.getNom() + " tombe nez à nez sur le romain" + minusRomain.getNom());
-		for (int i = 0; i < 3 ; i++) {
+
+		System.out.println("Dans la forêt " + asterixGaulois.getNom() + " et " + obelixGaulois.getNom()
+				+ " tombe nez à nez sur le romain" + minusRomain.getNom());
+		for (int i = 0; i < 3; i++) {
 			asterixGaulois.frapper(minusRomain);
 		}
 	}

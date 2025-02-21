@@ -21,9 +21,9 @@ public class Romain {
 		return "Le romain " + nom + " : ";
 	}
 
-	public void recevoirCoup(int forceCoup){
-		force = this.force - forceCoup ;
-		
+	public void recevoirCoup(int forceCoup) {
+		force = this.force - forceCoup;
+
 		if (force < 1) {
 			System.out.println(prendreParole() + "J'abandonne");
 		} else {
