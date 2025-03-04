@@ -1,7 +1,5 @@
 package test_fonctionnel;
 
-import java.util.Iterator;
-
 import personnages.Gaulois;
 import personnages.Romain;
 
@@ -9,6 +7,7 @@ public class TestGaulois {
 	public static void main(String[] args) {
 		Gaulois asterixGaulois = new Gaulois("Astérix", 8, 0);
 		Gaulois obelixGaulois = new Gaulois("Obélix", 16, 0);
+		Gaulois arbraracourcixGaulois = new Gaulois("Abraracourcix", 6, 0);
 		asterixGaulois.parler("Bonjour Obélix");
 		obelixGaulois.parler("Bonjour Astérix. Ca te dirais d'aller chasser des sangleirs ?");
 		asterixGaulois.parler("Oui très bonne idée");
