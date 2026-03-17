@@ -1,0 +1,26 @@
+package objet;
+
+public class Chaudron {
+	private int quantitePotion;
+	private int forcePotion;
+
+	public void remplirChaudron(int quantite, int forcePotion) {
+
+	}
+
+	public boolean resterPotion() {
+		if (quantitePotion > 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public void prendreLouche() {
+		if (quantitePotion <= 0) {
+			forcePotion = 0;
+		} else {
+			quantitePotion -= 1;
+		}
+	}
+}
