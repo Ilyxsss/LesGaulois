@@ -1,9 +1,12 @@
 package personnages;
 
+import village_gaulois.Village;
+
 public class Gaulois {
 	private String nom;
 	private int force;
 	private int effetPotion = 1;
+	private Village village;
 
 	public Gaulois(String nom, int force) {
 		super();
@@ -30,7 +33,6 @@ public class Gaulois {
 		System.out.println(Obelix);
 	}
 
-	@Override
 	public String toString() {
 		return nom;
 	}
@@ -41,9 +43,17 @@ public class Gaulois {
 		int forceCoup = (force * effetPotion) / 3;
 		romain.recevoirCoup(forceCoup);
 	}
-	
+
 	public void boirePotion(int forcePotion) {
 		this.effetPotion = forcePotion;
+	}
+
+	public void setVillage(Village village) {
+		this.village = village;
+	}
+
+	public void SePresenter() {
+
 	}
 
 }

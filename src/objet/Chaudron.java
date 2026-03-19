@@ -8,7 +8,7 @@ public class Chaudron {
 		this.quantitePotion = quantite;
 		this.forcePotion = forcePotion;
 	}
-
+	
 	public boolean resterPotion() {
 		if (quantitePotion > 0) {
 			return true;
