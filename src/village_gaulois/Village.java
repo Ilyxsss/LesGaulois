@@ -11,31 +11,35 @@ public class Village {
 	private Gaulois chef;
 	private Gaulois[] villageois = new Gaulois[30];
 
-	public static void main(String[] args) {
-		
-		Gaulois Abraracourcix = new Gaulois("Abraracourcix", 6);
-		Village village = new Village("Le Village des Irréductibles", 30, Abraracourcix);
-		Gaulois Asterix = new Gaulois("Astérix", 8);
-		Gaulois Obelix = new Gaulois("Obélix", 25);
-		Gaulois Doublepolemix = new Gaulois("Doublepolémix", 4);
-		
-		Gaulois gaulois = village.trouverVillageois(1);
-		System.out.println(gaulois);
-		gaulois = village.trouverVillageois(2);
-		System.out.println(gaulois);
-		village.ajouterVillageois(Asterix);
-		village.ajouterVillageois(Obelix);
-		village.afficherVillage();
-		Abraracourcix.SePresenter(Abraracourcix);
-		Asterix.SePresenter(Doublepolemix);
-		Doublepolemix.SePresenter(Asterix);
-	}
-
 	public Village(String nom, int nbVillageois, Gaulois chef) {
 		super();
 		this.nom = nom;
 		this.nbVillageois = nbVillageois;
 		this.chef = chef;
+		chef.setVillage(this);
+	}
+
+	public static void main(String[] args) {
+
+		Gaulois Abraracourcix = new Gaulois("Abraracourcix", 6);
+		Village village = new Village("Le Village des Irréductibles", 30, Abraracourcix);
+		Gaulois Asterix = new Gaulois("Astérix", 8);
+		Gaulois Obelix = new Gaulois("Obélix", 25);
+		Gaulois Doublepolemix = new Gaulois("Doublepolémix", 4);
+
+		Gaulois gaulois = village.trouverVillageois(1);
+		System.out.println(gaulois);
+		gaulois = village.trouverVillageois(2);
+		System.out.println(gaulois);
+
+		village.ajouterVillageois(Asterix);
+		village.ajouterVillageois(Obelix);
+
+		village.afficherVillage();
+
+		Abraracourcix.SePresenter(Abraracourcix);
+		Asterix.SePresenter(Asterix);
+		Doublepolemix.SePresenter(Doublepolemix);
 	}
 
 	public String getNom() {
