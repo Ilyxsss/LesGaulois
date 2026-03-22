@@ -4,6 +4,15 @@ public class Romain {
 	private String nom;
 	private int force;
 
+
+	public static void main(String[] args) {
+		Romain Minus = new Romain("Minus", -6);
+	}
+	
+	private Boolean isInvariantVerified() {
+		return force >= 0;
+	}
+
 	public Romain(String nom, int force) {
 		super();
 		this.nom = nom;
