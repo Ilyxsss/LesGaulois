@@ -52,8 +52,14 @@ public class Gaulois {
 		this.village = village;
 	}
 
-	public void SePresenter() {
-
+	public void SePresenter(Gaulois gaulois) {
+		if (village == null) {
+			parler("Bonjour, je m'appelle " + nom + ". Je voyage de villages en villages.");
+		} else if (this == village.getChef()) {
+			parler("Bonjour, je m'appelle " + nom + ". Je suis le chef du village : " + village.getNom() + ".");
+		} else {
+			parler("Bonjour, je m'appelle " + nom + ". J'habite le village : " + village.getNom() + ".");
+		}
 	}
 
 }
