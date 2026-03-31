@@ -37,9 +37,9 @@ public class Village {
 
 		village.afficherVillage();
 
-		Abraracourcix.SePresenter(Abraracourcix);
-		Asterix.SePresenter(Asterix);
-		Doublepolemix.SePresenter(Doublepolemix);
+		Abraracourcix.sepresenter();
+		Asterix.sepresenter();
+		Doublepolemix.sepresenter();
 	}
 
 	public String getNom() {
