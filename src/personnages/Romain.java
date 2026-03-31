@@ -7,10 +7,11 @@ public class Romain {
 	private int force;
 	private String texte;
 	private int nbEquipement = 0;
-	private Equipement[] equipements;
+	private Equipement[] equipements = new Equipement[2];
 
 	public static void main(String[] args) {
 		Romain Minus = new Romain("Minus", -6);
+		Minus.equiperSoldat(Equipement.CASQUE);
 	}
 
 	private Boolean isInvariantVerified() {
@@ -45,9 +46,9 @@ public class Romain {
 	}
 
 	public void recevoirCoup(int forceCoup) {
-		//précondition de la force du coup est positive
+		// précondition de la force du coup est positive
 		assert forceCoup > 0;
-		//post condition : la force a diminuée
+		// post condition : la force a diminuée
 		int oldForce = force;
 		force = force - forceCoup;
 		if (force < 1) {
@@ -56,9 +57,9 @@ public class Romain {
 		} else {
 			parler("Aïe");
 		}
-		//post condition : la force a diminuée
+		// post condition : la force a diminuée
 		assert force < oldForce;
-		
+
 		assert IsInvariantVerified();
 	}
 
